@@ -22,38 +22,51 @@
 
   <!-- Hero Section -->
   <header class="hero-section">
-    <div class="hero-badge">⚡ Biblioteca Digital Completa</div>
-    <h1>+150 Exercícios de <span>Handebol em Vídeo</span></h1>
-    <p>
-      Acesso digital pelo celular, tablet ou computador. Pronto para assistir e aplicar em suas sessões de treinamento imediatas.
-    </p>
-    
-    <div class="cta-container">
-      <a href="#preco" class="btn-primary">Adquirir Acesso Vitalício</a>
-      <a href="#recursos" class="btn-secondary">Ver Detalhes ➔</a>
-    </div>
-
-    <!-- App Mockup Visual -->
-    <div class="mockup-container">
-      <div class="mockup-header">
-        <div class="mockup-dot"></div>
-        <div class="mockup-dot"></div>
-        <div class="mockup-dot"></div>
-        <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 1rem;">plataforma.handballpro.com</span>
-      </div>
-      <div class="mockup-content">
-        <!-- Render a realistic visual inside the mock browser container -->
-        <div style="text-align: center; z-index: 2; padding: 2rem;">
-          <div class="mockup-play-btn" onclick="document.getElementById('preco').scrollIntoView({behavior: 'smooth'})">
-            <svg viewBox="0 0 24 24" style="width: 36px; height: 36px; fill: #fff; margin-left: 5px;"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <p style="margin-top: 1.5rem; font-weight: 700; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-            Vídeo Aulas divididas em 6 Categorias Principais
-          </p>
+    <div class="hero-grid-container">
+      <!-- Left side: Text & CTA -->
+      <div class="hero-text-left">
+        <div class="hero-title-main">
+          <div class="title-number">+150</div>
+          <div class="title-sub">EXERCÍCIOS DE</div>
+          <div class="title-highlight">HANDEBOL</div>
         </div>
-        <!-- Abstract gradient shapes to make it look premium -->
-        <div style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255, 94, 43, 0.15) 0%, transparent 70%); top: -50px; left: -50px;"></div>
-        <div style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0, 210, 255, 0.1) 0%, transparent 70%); bottom: -50px; right: -50px;"></div>
+        
+        <p class="hero-desc-sub">
+          Evolua no passe, arremesso, finta, defesa e tática com treinos em vídeo práticos e objetivos. Ideal para pais, professores e jogadores que levam o esporte a sério!
+        </p>
+        
+        <div class="cta-container">
+          <a href="#preco" class="btn-hero-cta">QUERO ACESSAR AGORA</a>
+        </div>
+        
+        <!-- Bottom Features Badges -->
+        <div class="hero-features-row">
+          <div class="hero-feature-badge">
+            <span class="feature-text">🏐 PASSES</span>
+          </div>
+          <div class="hero-feature-badge">
+            <span class="feature-text">🎯 ARREMESSO</span>
+          </div>
+          <div class="hero-feature-badge">
+            <span class="feature-text">🏃‍♂️ AGILIDADE</span>
+          </div>
+          <div class="hero-feature-badge">
+            <span class="feature-text">🛡️ DEFESA</span>
+          </div>
+          <div class="hero-feature-badge">
+            <span class="feature-text">📋 TÁTICAS</span>
+          </div>
+          <div class="hero-feature-badge">
+            <span class="feature-text">🎁 BÔNUS EXCLUSIVOS</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right side: Visual mockups (using the new uploaded hero image) -->
+      <div class="hero-visual-right">
+        <div class="hero-media-wrapper">
+          <img src="images/hero.jpg" alt="100 Treinos de Handebol Mockups" class="hero-cropped-img">
+        </div>
       </div>
     </div>
   </header>
