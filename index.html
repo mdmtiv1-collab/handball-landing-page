@@ -15,15 +15,10 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="header-nav">
-    <a href="#" class="brand">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary)" style="display: inline-block; vertical-align: middle;">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-      </svg>
-      Handball<span>Pro</span>
-    </a>
-  </nav>
+  <!-- Top Promo Banner -->
+  <div class="promo-banner-top">
+    <span>🔥 OFERTA LIMITADA - TERMINA EM <strong id="promo-timer">50:00</strong></span>
+  </div>
 
   <!-- Hero Section -->
   <header class="hero-section">
@@ -229,8 +224,9 @@
     <p>&copy; 2026 HandballPro. Todos os direitos reservados. Plataforma de treinamento interativa.</p>
   </footer>
 
-  <!-- FAQ Accordion script -->
+  <!-- FAQ Accordion and Countdown Timer script -->
   <script>
+    // FAQ Accordion
     document.querySelectorAll('.faq-card').forEach(card => {
       card.addEventListener('click', () => {
         const isActive = card.classList.contains('active');
@@ -245,6 +241,31 @@
         }
       });
     });
+
+    // Countdown Timer for Top Promo Banner
+    const timerElement = document.getElementById('promo-timer');
+    let totalSeconds = 50 * 60; // 50 minutes
+
+    function updateTimer() {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      
+      const formattedMinutes = String(minutes).padStart(2, '0');
+      const formattedSeconds = String(seconds).padStart(2, '0');
+      
+      timerElement.textContent = `${formattedMinutes}:${formattedSeconds}`;
+      
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      } else {
+        // Reset back to 50:00 when hitting zero for urgency consistency
+        totalSeconds = 50 * 60;
+      }
+    }
+
+    // Run immediately and then update every second
+    updateTimer();
+    setInterval(updateTimer, 1000);
   </script>
 </body>
 </html>
