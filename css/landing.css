@@ -498,6 +498,7 @@ body {
   font-size: 0.92rem;
   color: #e5e7eb;
   transition: var(--transition-all);
+  text-align: left;
 }
 
 .plan-feature-item:hover {
@@ -627,6 +628,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .section-wrapper, .pricing-wrapper {
+    padding: 3rem 1.25rem;
+  }
   .hero-section {
     padding: 1rem 1.25rem 1.5rem 1.25rem;
   }
@@ -652,7 +656,7 @@ body {
   .pricing-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 0 0.5rem;
+    padding: 0;
   }
   .pricing-card {
     padding: 2rem 1.25rem 1.75rem 1.25rem;
