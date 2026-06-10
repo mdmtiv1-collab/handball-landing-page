@@ -75,7 +75,7 @@ body {
 .hero-section {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 4rem 2rem 5rem 2rem;
+  padding: 1.5rem 2rem 2rem 2rem;
   text-align: center;
   position: relative;
   display: flex;
@@ -90,22 +90,22 @@ body {
   background: rgba(255, 94, 43, 0.08);
   border: 1px solid rgba(255, 94, 43, 0.2);
   color: var(--primary);
-  padding: 0.5rem 1.25rem;
+  padding: 0.35rem 1rem;
   border-radius: 50px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
 /* Headline */
 .hero-section h1 {
-  font-size: 3.75rem;
+  font-size: 2.75rem;
   font-weight: 900;
   line-height: 1.15;
   letter-spacing: -1.5px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
   color: #ffffff;
   max-width: 900px;
 }
@@ -119,8 +119,8 @@ body {
 /* Mockup Image Stacked */
 .hero-image-container {
   width: 100%;
-  max-width: 850px;
-  margin: 0 auto 3rem auto;
+  max-width: 700px;
+  margin: 0 auto 1.25rem auto;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.7);
@@ -137,11 +137,11 @@ body {
 
 /* Subheadline */
 .hero-subheadline {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  max-width: 800px;
-  margin: 0 auto 2.5rem auto;
-  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto 1.25rem auto;
+  line-height: 1.5;
 }
 
 /* Hero CTA Button */
@@ -150,7 +150,7 @@ body {
   justify-content: center;
   gap: 1.25rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -610,29 +610,33 @@ body {
 /* Responsive Styles */
 @media (max-width: 992px) {
   .hero-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .hero-image-container {
     max-width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 2.5rem 1.25rem 4rem 1.25rem;
+    padding: 1rem 1.25rem 1.5rem 1.25rem;
+  }
+  .hero-badge {
+    margin-bottom: 0.75rem;
+    font-size: 0.7rem;
   }
   .hero-section h1 {
-    font-size: 2.25rem;
-    margin-bottom: 1.75rem;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
     letter-spacing: -1px;
   }
   .hero-image-container {
-    margin-bottom: 1.75rem;
+    margin-bottom: 0.75rem;
   }
   .hero-subheadline {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
   }
   .testimonials-grid {
     grid-template-columns: 1fr;
