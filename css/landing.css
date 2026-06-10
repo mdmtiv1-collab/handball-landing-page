@@ -400,6 +400,7 @@ body {
   max-width: 900px;
   margin: 3rem auto 0 auto;
   align-items: stretch;
+  scroll-margin-top: 2rem;
 }
 
 .pricing-card {
