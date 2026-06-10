@@ -629,10 +629,16 @@ body {
 
 @media (max-width: 768px) {
   .section-wrapper, .pricing-wrapper {
-    padding: 3rem 1.25rem;
+    padding: 2.5rem 0.75rem;
+  }
+  .pricing-wrapper .section-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .hero-section {
-    padding: 1rem 1.25rem 1.5rem 1.25rem;
+    padding: 1rem 0.75rem 1.5rem 0.75rem;
   }
   .hero-badge {
     margin-bottom: 0.75rem;
@@ -650,8 +656,25 @@ body {
     font-size: 0.95rem;
     margin-bottom: 1rem;
   }
-  .testimonials-grid {
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  .section-header h2 {
+    font-size: 1.85rem;
+  }
+  .section-header p {
+    font-size: 0.95rem;
+  }
+  .features-grid, .categories-grid, .bonus-grid, .testimonials-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .feature-item, .bonus-box, .testimonial-card {
+    padding: 1.5rem 1.25rem;
+  }
+  .category-pill {
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
   }
   .pricing-grid {
     grid-template-columns: 1fr;
@@ -659,7 +682,7 @@ body {
     padding: 0;
   }
   .pricing-card {
-    padding: 2rem 1.25rem 1.75rem 1.25rem;
+    padding: 2rem 1rem 1.75rem 1rem;
   }
   .price-box h4 {
     font-size: 2.75rem;
@@ -671,6 +694,8 @@ body {
   .btn-primary, .btn-secondary, .btn-hero-cta {
     width: 100%;
     text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
