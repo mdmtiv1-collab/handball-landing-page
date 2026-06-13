@@ -6,13 +6,14 @@
   <title>+150 Exercícios de Handebol em Vídeo | Pacote Completo</title>
   <meta name="description" content="Acesso imediato a +150 exercícios de handebol em vídeo com metodologias validadas. Bônus exclusivos para treinadores e formadores.">
   
-  <!-- Preconnect to Google Fonts and load stylesheet -->
+  <!-- Preconnect to Google Fonts and load stylesheet asynchronously -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-  <!-- Preload the critical above-the-fold hero image -->
-  <link rel="preload" as="image" href="images/hero.webp" type="image/webp" fetchpriority="high">
+  <!-- Preload the critical above-the-fold hero image responsively -->
+  <link rel="preload" as="image" href="images/hero_mobile.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero_desktop.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
 
   <!-- OG tags for social sharing -->
   <meta property="og:title" content="+150 Exercícios de Handebol em Vídeo | Pacote Completo" />
@@ -54,8 +55,10 @@
     <!-- Centered Mockup Image -->
     <div class="hero-image-container">
       <picture>
-        <source srcset="images/hero.webp" type="image/webp">
-        <source srcset="images/hero_optimized.jpg" type="image/jpeg">
+        <source media="(max-width: 768px)" srcset="images/hero_mobile.webp" type="image/webp">
+        <source media="(max-width: 768px)" srcset="images/hero_mobile_optimized.jpg" type="image/jpeg">
+        <source media="(min-width: 769px)" srcset="images/hero_desktop.webp" type="image/webp">
+        <source media="(min-width: 769px)" srcset="images/hero_desktop_optimized.jpg" type="image/jpeg">
         <img src="images/hero.jpg" alt="100 Treinos de Handebol Mockups" class="hero-stacked-img" width="700" height="400" loading="eager" fetchpriority="high">
       </picture>
     </div>
