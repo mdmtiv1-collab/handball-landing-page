@@ -340,6 +340,66 @@
     // Run immediately and then update every second
     updateTimer();
     setInterval(updateTimer, 1000);
+
+    // Social Proof Notifications Loop
+    const firstNames = ['Carlos', 'Ana', 'Ricardo', 'Mariana', 'Lucas', 'Juliana', 'Felipe', 'Gabriela', 'Rodrigo', 'Camila', 'Gustavo', 'Fernanda', 'Diego', 'Beatriz', 'Marcelo', 'Vanessa', 'Thiago', 'Aline', 'Bruno', 'Letícia'];
+    const cities = ['São Paulo/SP', 'Rio de Janeiro/RJ', 'Belo Horizonte/MG', 'Curitiba/PR', 'Porto Alegre/RS', 'Salvador/BA', 'Recife/PE', 'Fortaleza/CE', 'Brasília/DF', 'Florianópolis/SC', 'Goiânia/GO', 'Campinas/SP', 'Vitória/ES', 'Manaus/AM', 'Natal/RN'];
+    const products = ['Plano Premium', 'Plano Básico'];
+    const times = ['agora mesmo', 'há 2 minutos', 'há 5 minutos', 'há 8 minutos', 'há 12 minutos', 'há 15 minutos'];
+    const emojis = ['🔥', '✅', '⚡', '🎉'];
+
+    // Create container dynamically
+    const container = document.createElement('div');
+    container.className = 'social-proof-container';
+    document.body.appendChild(container);
+
+    function showNotification() {
+      container.innerHTML = ''; // Clear previous
+
+      const name = firstNames[Math.floor(Math.random() * firstNames.length)];
+      const city = cities[Math.floor(Math.random() * cities.length)];
+      const product = products[Math.random() > 0.35 ? 0 : 1]; // ~65% buy Premium
+      const time = times[Math.floor(Math.random() * times.length)];
+      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+      const toast = document.createElement('div');
+      toast.className = 'social-proof-toast';
+      toast.innerHTML = `
+        <div class="toast-icon">${emoji}</div>
+        <div class="toast-content">
+          <p class="toast-title"><strong>${name}</strong> (${city})</p>
+          <p class="toast-body">Adquiriu o <strong>${product}</strong></p>
+          <span class="toast-time">${time}</span>
+        </div>
+      `;
+
+      container.appendChild(toast);
+
+      // Slide in
+      setTimeout(() => {
+        toast.classList.add('show');
+      }, 100);
+
+      // Slide out and remove toast after 5 seconds
+      setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+          toast.remove();
+        }, 500);
+      }, 5000);
+    }
+
+    // Run first notification after 6 seconds, then repeat with random delays
+    setTimeout(showNotification, 6000);
+    
+    function triggerNext() {
+      const delay = 18000 + Math.random() * 12000; // Between 18s and 30s
+      setTimeout(() => {
+        showNotification();
+        triggerNext();
+      }, delay);
+    }
+    triggerNext();
   </script>
 </body>
 </html>
