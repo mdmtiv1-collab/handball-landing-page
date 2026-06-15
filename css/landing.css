@@ -876,3 +876,24 @@ body {
   }
 }
 
+/* Hero Security Badges */
+.hero-security-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.85rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hero-security-badges span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  letter-spacing: 0.2px;
+}
+
