@@ -44,7 +44,7 @@
 
   <!-- Top Promo Banner -->
   <div class="promo-banner-top">
-    <span>🔥 OFERTA LIMITADA - TERMINA EM <strong id="promo-timer">50:00</strong></span>
+    <span>🔥 Oferta limitada apenas hoje: <strong id="promo-date"></strong></span>
   </div>
 
   <!-- Hero Section -->
@@ -207,7 +207,11 @@
           <a href="https://pay.wiapy.com/0-QGZp8HLi" target="_blank" class="btn-primary" style="display: block; width: 100%; text-align: center; margin-top: auto;">
             Quero o Plano Básico
           </a>
-          <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">🔒 Pagamento seguro. Garantia de 7 dias.</p>
+          <div class="security-badges-container">
+            <div class="badge-item">🔒 Compra 100% Segura</div>
+            <div class="badge-item">🛡️ Garantia de 7 Dias</div>
+            <div class="badge-item">⚡ Acesso Vitalício Imediato</div>
+          </div>
         </div>
 
         <!-- Plano Premium (Destacado) -->
@@ -253,7 +257,20 @@
           <a href="https://pay.wiapy.com/6a28b2b6a5c87fcd42078fb6" target="_blank" class="btn-primary" style="display: block; width: 100%; text-align: center; margin-top: auto;">
             Quero o Plano Premium
           </a>
-          <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">🔒 Pagamento seguro. Garantia de 7 dias.</p>
+          <div class="security-badges-container">
+            <div class="badge-item">🔒 Compra 100% Segura</div>
+            <div class="badge-item">🛡️ Garantia de 7 Dias</div>
+            <div class="badge-item">⚡ Acesso Vitalício Imediato</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 Day Guarantee Block -->
+      <div class="guarantee-block">
+        <div class="guarantee-seal">🛡️</div>
+        <div class="guarantee-text">
+          <h3>Garantia Incondicional de 7 Dias</h3>
+          <p>Experimente o material por 7 dias. Se você não gostar do conteúdo ou achar que não serve para o seu time, basta enviar um e-mail ou mensagem no suporte e <strong>devolvemos 100% do seu dinheiro</strong>. Sem perguntas ou burocracia.</p>
         </div>
       </div>
     </div>
@@ -316,30 +333,13 @@
       });
     });
 
-    // Countdown Timer for Top Promo Banner
-    const timerElement = document.getElementById('promo-timer');
-    let totalSeconds = 50 * 60; // 50 minutes
-
-    function updateTimer() {
-      const minutes = Math.floor(totalSeconds / 60);
-      const seconds = totalSeconds % 60;
-      
-      const formattedMinutes = String(minutes).padStart(2, '0');
-      const formattedSeconds = String(seconds).padStart(2, '0');
-      
-      timerElement.textContent = `${formattedMinutes}:${formattedSeconds}`;
-      
-      if (totalSeconds > 0) {
-        totalSeconds--;
-      } else {
-        // Reset back to 50:00 when hitting zero for urgency consistency
-        totalSeconds = 50 * 60;
-      }
+    // Set dynamic date in promo banner
+    const dateElement = document.getElementById('promo-date');
+    if (dateElement) {
+      const options = { day: 'numeric', month: 'long' };
+      const today = new Date().toLocaleDateString('pt-BR', options);
+      dateElement.textContent = today;
     }
-
-    // Run immediately and then update every second
-    updateTimer();
-    setInterval(updateTimer, 1000);
 
     // Social Proof Notifications Loop
     const firstNames = ['Carlos', 'Ana', 'Ricardo', 'Mariana', 'Lucas', 'Juliana', 'Felipe', 'Gabriela', 'Rodrigo', 'Camila', 'Gustavo', 'Fernanda', 'Diego', 'Beatriz', 'Marcelo', 'Vanessa', 'Thiago', 'Aline', 'Bruno', 'Letícia'];

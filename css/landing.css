@@ -804,3 +804,75 @@ body {
   }
 }
 
+/* Security Badges & Guarantee Styles */
+.security-badges-container {
+  margin-top: 1.25rem;
+  padding: 0.85rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  text-align: center;
+}
+
+.badge-item {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  letter-spacing: 0.2px;
+}
+
+.guarantee-block {
+  max-width: 900px;
+  margin: 3rem auto 0 auto;
+  background: linear-gradient(135deg, rgba(255, 94, 43, 0.04) 0%, rgba(17, 24, 39, 0.6) 100%);
+  border: 1px solid rgba(255, 94, 43, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-align: left;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.guarantee-seal {
+  font-size: 3.5rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 10px rgba(255, 94, 43, 0.2));
+}
+
+.guarantee-text h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.guarantee-text p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.guarantee-text p strong {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .guarantee-block {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.75rem 1.25rem;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+}
+
