@@ -6,9 +6,8 @@
   <title>+150 Exercícios de Handebol em Vídeo | Pacote Completo</title>
   <meta name="description" content="Acesso imediato a +150 exercícios de handebol em vídeo com metodologias validadas. Bônus exclusivos para treinadores e formadores.">
   
-  <!-- Preload the critical above-the-fold hero image responsively -->
-  <link rel="preload" as="image" href="images/hero_mobile.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
-  <link rel="preload" as="image" href="images/hero_desktop.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
+  <!-- Preload the critical above-the-fold hero gif -->
+  <link rel="preload" as="image" href="images/HANDEBOL.gif" type="image/gif" fetchpriority="high">
 
   <!-- OG tags for social sharing -->
   <meta property="og:title" content="+150 Exercícios de Handebol em Vídeo | Pacote Completo" />
@@ -956,6 +955,20 @@ body {
   }
 }
 
+.members-area-text {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-top: -0.25rem;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  justify-content: center;
+}
+
 /* Value Stack Badge */
 .value-stack-badge {
   background: linear-gradient(135deg, #ff5e2b 0%, #ff2a5f 100%);
@@ -1034,25 +1047,16 @@ body {
   <!-- Hero Section -->
   <header class="hero-section">
     <h1>+150 Exercícios de <span>Handebol em Vídeo</span></h1>
+    <div class="members-area-text">Veja nossa área de membros ↴</div>
     
-    <!-- Centered Mockup Image -->
+    <!-- Centered Mockup Image (GIF) -->
     <div class="hero-image-container">
-      <picture>
-        <source media="(max-width: 768px)" srcset="images/hero_mobile.webp" type="image/webp">
-        <source media="(max-width: 768px)" srcset="images/hero_mobile_optimized.jpg" type="image/jpeg">
-        <source media="(min-width: 769px)" srcset="images/hero_desktop.webp" type="image/webp">
-        <source media="(min-width: 769px)" srcset="images/hero_desktop_optimized.jpg" type="image/jpeg">
-        <img src="images/hero.jpg" alt="100 Treinos de Handebol Mockups" class="hero-stacked-img" width="700" height="400" loading="eager" fetchpriority="high">
-      </picture>
+      <img src="images/HANDEBOL.gif" alt="Área de Membros Handebol" class="hero-stacked-img" width="700" height="400" loading="eager" fetchpriority="high">
     </div>
     
-    <div class="hero-stars" style="margin-top: 0.5rem; margin-bottom: 1rem;">
+    <div class="hero-stars" style="margin-top: 0.75rem; margin-bottom: 1.25rem;">
       <span class="stars-row">⭐⭐⭐⭐⭐</span> <span>(4,9/5,0) +1.100 treinadores e pais aprovam</span>
     </div>
-    
-    <p class="hero-subheadline">
-      Chega de repetir os mesmos treinos: encontre rapidamente exercícios de handebol para montar aulas mais práticas, variadas e envolventes para seus alunos.
-    </p>
     
     <div class="cta-container">
       <a href="#preco" class="btn-hero-cta">QUERO ACESSAR AGORA</a>
