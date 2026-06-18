@@ -982,6 +982,25 @@ body {
   text-transform: uppercase;
 }
 
+.urgency-scarcity-text {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #ff3b3b; /* Vibrant alert red */
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  animation: pulse-red-text 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse-red-text {
+  0% { opacity: 0.85; }
+  50% { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 0.85; }
+}
+
 @keyframes pulse-badge {
   0% {
     transform: scale(1);
@@ -1229,6 +1248,9 @@ body {
           <a href="https://pay.wiapy.com/6a28b2b6a5c87fcd42078fb6" target="_blank" class="btn-primary" style="display: block; width: 100%; text-align: center; margin-top: auto;">
             Quero o Plano Premium
           </a>
+          <div class="urgency-scarcity-text">
+            🔥 Preço promocional garantido apenas hoje!
+          </div>
           <div class="security-badges-container">
             <div class="badge-item">🔒 Compra 100% Segura</div>
             <div class="badge-item">🛡️ Garantia de 7 Dias</div>
