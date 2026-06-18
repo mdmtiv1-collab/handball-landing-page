@@ -924,7 +924,32 @@ body {
   letter-spacing: 0.2px;
 }
 
+/* Hero Stars Rating */
+.hero-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
 
+.hero-stars span {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .hero-stars {
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+  }
+  .hero-stars span {
+    font-size: 0.75rem;
+  }
+}
   </style>
   
   
@@ -939,6 +964,9 @@ body {
   <!-- Hero Section -->
   <header class="hero-section">
     <div class="hero-badge">⚡ Biblioteca Digital Completa</div>
+    <div class="hero-stars">
+      ⭐⭐⭐⭐⭐ <span>4.9/5 - Recomendado por mais de 1.100 treinadores e pais</span>
+    </div>
     <h1>+150 Exercícios de <span>Handebol em Vídeo</span></h1>
     
     <!-- Centered Mockup Image -->
