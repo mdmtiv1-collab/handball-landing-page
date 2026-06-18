@@ -929,14 +929,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   margin-bottom: 0.75rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .stars-row {
   font-size: 1.15rem;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .hero-stars span {
@@ -947,7 +949,10 @@ body {
 
 @media (max-width: 768px) {
   .hero-stars span {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
+  }
+  .stars-row {
+    font-size: 0.95rem;
   }
 }
 
