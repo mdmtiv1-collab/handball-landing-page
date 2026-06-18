@@ -950,6 +950,52 @@ body {
     font-size: 0.78rem;
   }
 }
+
+/* Value Stack Badge */
+.value-stack-badge {
+  background: linear-gradient(135deg, #ff5e2b 0%, #ff2a5f 100%);
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.82rem;
+  padding: 0.65rem 0.95rem;
+  border-radius: 8px;
+  margin: 0.75rem auto 1.25rem auto;
+  text-align: center;
+  letter-spacing: 0.5px;
+  max-width: 310px;
+  box-shadow: 0 4px 15px rgba(255, 94, 43, 0.4);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  animation: pulse-badge 2s infinite;
+}
+
+.price-comparison {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-top: 0.4rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+@keyframes pulse-badge {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 94, 43, 0.4);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(255, 94, 43, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 94, 43, 0.4);
+  }
+}
   </style>
   
   
@@ -1143,6 +1189,10 @@ body {
           <div class="price-box">
             <span class="price-original">de R$ 47,90</span>
             <h4>R$ 23<span>,90</span></h4>
+            <span class="price-comparison">Apenas R$ 9,00 a mais que o Básico!</span>
+          </div>
+          <div class="value-stack-badge">
+            🎁 LEVE R$ 120,00 EM BÔNUS INCLUSOS GRÁTIS
           </div>
           
           <div class="plan-features">
